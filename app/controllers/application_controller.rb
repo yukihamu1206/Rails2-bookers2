@@ -13,8 +13,8 @@ def after_sign_up_path_for(resource)
  
   def after_sign_in_path_for(resource)
     flash[:notice] = "signed in successfully"
-   	user_path(@user.id)
-    @user = User.find(current_user.id)
+   	user_path(current_user.id)
+    
   end
 
   def after_sign_out_path_for(resource)

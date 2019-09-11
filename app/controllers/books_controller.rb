@@ -27,8 +27,8 @@ class BooksController < ApplicationController
     @post_book = Book.new
     @books = Book.all
     @book = Book.find(params[:id])
-
-    @user = User.find(current_user.id)
+    @user = User.find(@book.user.id)
+    @current_user = User.find(current_user.id)
 
   end
 
@@ -64,7 +64,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-  params.require(:book).permit(:title, :body)
+  params.require(:book).permit(:title, :body, :user_id)
   end
 
   def correct_user
