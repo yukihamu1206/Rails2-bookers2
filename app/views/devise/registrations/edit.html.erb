@@ -1,0 +1,41 @@
+<div class="body">
+  <div class="container">
+    <div class="row">
+        
+        <h2>User info</h2>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+
+        <div class="field">
+          <label>Image</label>
+          <%= f.attachment_field :profile_image, class: "user-edit-form" %>
+        </div>
+
+
+        <div class="field">
+          <label>Introduction</label>
+          <%= f.text_field :introduction, class: "intorduction-edit-form" %>
+        </div>
+        
+
+        <div class="actions">
+          <%= f.submit "Update User" %>
+        </div>
+        
+        <% end %>
+
+
+    </div>
+  </div>
+</div>

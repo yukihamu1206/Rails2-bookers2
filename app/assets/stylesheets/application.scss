@@ -1,0 +1,139 @@
+ 
+
+
+ @import "bootstrap-sprockets";  /*ここを追加*/
+    @import "bootstrap";         /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.navbar-fixed-top{
+	height:50px;
+	padding:0 auto;
+}
+
+
+.body{
+	margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar-left{
+	color:white;
+	font-size:20px;
+}
+
+.navbar-right{
+	color:#9d9d9d;
+	line-height:50px;
+	font-size:13px;
+}
+
+.glyphicon{
+	padding:10px,15px;
+}
+
+.notice {
+color: green;
+ margin:0 0 10px;
+}
+
+.alert {
+  color:green;
+  margin:0 0 10px;
+}
+
+.body{
+	margin-top:50px;
+}
+
+#notice{
+	margin-bottom:10px;
+}
+
+.field{
+	margin-bottom:10px;
+}
+
+strong{
+	font-weight:bold;
+}
+
+.action{
+	margin-bottom:10px;
+	}
+
+.copy-right{
+	font-size:14px;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	display:block;
+}
+
+.log-in{
+	color:#666;
+}
+
+.sign-up{
+	color:#666;
+}
+
+.col-xs-3{
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.action-row{
+	margin-top:10px;
+}
+
+.show-flash{
+	text-align:left;
+	margin-top:10px;
+}
+
+.book_list{
+	font-size:13px;
+}
+
+.destroy{
+	color:#666;
+}
+
+.opinion_field{
+	height:50px;
+}
+
+.under-row{
+	margin-top:5px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.intorduction-edit-form{
+	height:50px;
+}

@@ -1,0 +1,21 @@
+<div class="body">
+    <div class="container">
+	<div class="row">
+		<%= render'books/list'%>
+			<div class="col-xs-9">
+				<h2>Book details</h2>
+					<table class="table">
+					    <tr>
+					    	<th><a><%= attachment_image_tag @book.user, :profile_image,size: "40x40",format: 'jpeg', fallback:"no_image.jpg" %><br><%= link_to @book.user.name, user_path(@book.user_id) %> </a>
+					    </th>
+							<th class="book_list"><%= @book.title %></th>
+							<th class="book_list"><%= @book.body %></th>
+								<% if @book.user == current_user %>
+								<th><%= link_to 'edit', edit_book_path(@book), class: "btn btn-info book_list" %></th>
+									<th><%= link_to 'destroy', "/books/#{@book.id}", method: :delete, data: { 'confirm' =>  '本当に削除しますか？' }, class: "btn btn-danger book_list destroy" %><th>
+								<% end %>
+					</table>
+			</div>
+		</div>
+	</div>
+</div>
